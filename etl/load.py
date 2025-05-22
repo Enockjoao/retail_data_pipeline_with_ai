@@ -2,11 +2,11 @@ import os
 import json
 from tinydb import TinyDB, Query
 
-# Define o caminho base onde salvar os arquivos JSON e o TinyDB
+# Set the base path where to save the JSON files and TinyDB
 BASE_PATH = r"C:\Users\vitor\Desktop\api_with_ia\data"
-os.makedirs(BASE_PATH, exist_ok=True)  # cria a pasta se não existir
+os.makedirs(BASE_PATH, exist_ok=True)  
 
-# Caminhos para arquivos JSON e TinyDB
+# Paths to JSON and TinyDB files
 PRODUCTS_JSON_PATH = os.path.join(BASE_PATH, "products.json")
 CARTS_JSON_PATH = os.path.join(BASE_PATH, "carts.json")
 USERS_JSON_PATH = os.path.join(BASE_PATH, "users.json")
@@ -14,9 +14,9 @@ TINYDB_PATH = os.path.join(BASE_PATH, "database.json")
 
 class Load:
     def __init__(self):
-        # Inicializa o banco TinyDB
+        # Initialize the TinyDB database
         self.db = TinyDB(TINYDB_PATH)
-        # Cria tabelas separadas no TinyDB para produtos, carrinhos e usuários
+        # Create separate tables in TinyDB for products, carts and users
         self.products_table = self.db.table('products')
         self.carts_table = self.db.table('carts')
         self.users_table = self.db.table('users')
@@ -26,12 +26,12 @@ class Load:
             json.dump(data, f, indent=4, ensure_ascii=False)
 
     def load_products(self, products):
-        # Salva no JSON
+        # Save to JSON file
         self.save_json(products, PRODUCTS_JSON_PATH)
 
-        # Salva no TinyDB - atualiza se id já existe, senão insere
+        # Saves to TinyDB - updates if id already exists, otherwise inserts
         for product in products:
-            # Query para buscar por id
+            # Query object to search for the product by id
             Product = Query()
             if self.products_table.contains(Product.id == product['id']):
                 self.products_table.update(product, Product.id == product['id'])
