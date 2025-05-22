@@ -16,18 +16,27 @@ This project is a modular **ETL pipeline** (Extract, Transform, Load) that colle
 
 ## 🗂️ Project Structure
 
+```text
 api_with_ia/
-├── main.py # Entry point for running the pipeline
-├── etl/ # ETL logic lives here
-│ ├── extract.py # Extracts data from API
-│ ├── transform.py # Transforms raw data
-│ └── load.py # Loads data into files and database
-├── data/ # Output folder for processed data
-│ ├── products.json
-│ ├── users.json
-│ └── carts.json
-├── db.json # TinyDB storage file
-└── requirements.txt # Dependencies
+├── ai
+├── main.py               # Entry point for running the pipeline
+├── etl/                  # ETL logic lives here
+│   ├── extract.py        # Extracts data from API
+│   ├── transform.py      # Transforms raw data
+│   └── load.py           # Loads data into files and database
+├── data/                 # Output folder for processed data
+    ├── carts.json        # carts storage file
+    ├── product.json      # product storage file
+    ├── tinydb.json       # TinyDB storage file
+    └── users.json        # users storage file
+├── tests/
+│   ├── products.json
+│   ├── users.json
+│   └── carts.json
+├── etl_log.log
+├── db.json               # TinyDB storage file
+└── requirements.txt      # Dependencies
+
 
 yaml
 Copiar
