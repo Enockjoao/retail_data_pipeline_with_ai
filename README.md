@@ -49,25 +49,25 @@ api_with_ia/
 pip install -r requirements.txt
 Run the ETL pipeline```
 
-
+```
 python main.py
 The data will be saved to:
 
 
 
-And also stored in db.json using TinyDB.
+And also stored in db.json using TinyDB.```
 
 ---
-
+```
 🔧 Technologies Used
 Python 3.8+
 
 requests
 
-tinydb
+tinydb```
 
 ---
-
+```
 ✅ Features
 Modular ETL architecture
 
@@ -77,10 +77,10 @@ Logging with timestamps and levels
 
 Organized for international development
 
-Easily extensible
+Easily extensible```
 
 ---
-
+```
 📊 Use Case
 This project is ideal for:
 
@@ -88,18 +88,18 @@ Learning ETL architecture
 
 Prototyping analytics pipelines
 
-Simulating data pipelines for e-commerce
+Simulating data pipelines for e-commerce```
 
 ---
-
+```
 📝 License
-This project is licensed under the MIT License. See the LICENSE file for more details.
+This project is licensed under the MIT License. See the LICENSE file for more details.```
 
 ---
-
+```
 👨‍💻 Author
 Developed by Enock.
 Feel free to connect on LinkedIn or send a message via email.
 LinkedIn :https://www.linkedin.com/in/joao-victor-enock-972b682b9/
-Gmail: enokjoao@gmail.com
+Gmail: enokjoao@gmail.com```
 
