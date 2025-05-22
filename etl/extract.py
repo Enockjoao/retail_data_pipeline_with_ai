@@ -1,4 +1,5 @@
 import requests
+import logging
 
 url_products = "https://fakestoreapi.com/products"
 url_carts = "https://fakestoreapi.com/carts"
@@ -11,20 +12,31 @@ class Extract:
         self.url_users = url_users
 
     def extract_products(self):
-        response = requests.get(self.url_products)
-        return(response.json())
+        try:
+            response = requests.get(self.url_products)
+            response.raise_for_status()
+            logging.info("Products successfully extracted.")
+            return response.json()
+        except Exception as e:
+            logging.error(f"Failed to extract products: {e}")
+            raise
 
     def extract_carts(self):
-        response = requests.get(self.url_carts)
-        return(response.json())
+        try:
+            response = requests.get(self.url_carts)
+            response.raise_for_status()
+            logging.info("Carts successfully extracted.")
+            return response.json()
+        except Exception as e:
+            logging.error(f"Failed to extract carts: {e}")
+            raise
 
     def extract_users(self):
-        response = requests.get(self.url_users)
-        return(response.json())
-
-
-extract = Extract(url_products, url_carts, url_users)
-
-
-
-
+        try:
+            response = requests.get(self.url_users)
+            response.raise_for_status()
+            logging.info("Users successfully extracted.")
+            return response.json()
+        except Exception as e:
+            logging.error(f"Failed to extract users: {e}")
+            raise
