@@ -1,4 +1,4 @@
-# 🛒 E-Commerce ETL Pipeline
+# 🛒 E-Commerce ETL Pipeline With AI
 
 This project is a modular **ETL pipeline** (Extract, Transform, Load) that collects e-commerce data from a public API and stores it locally in both JSON files and a TinyDB database.
 
