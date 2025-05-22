@@ -37,32 +37,27 @@ api_with_ia/
 ├── db.json               # TinyDB storage file
 └── requirements.txt      # Dependencies
 
-
-yaml
-Copiar
-Editar
-
 ---
 
 ## 🚀 How to Run
 
 1. **Install dependencies**
 
+---
+
 ```bash
 pip install -r requirements.txt
 Run the ETL pipeline
 
-bash
-Copiar
-Editar
+
 python main.py
 The data will be saved to:
 
-kotlin
-Copiar
-Editar
-C:\Users\vitor\Desktop\api_with_ia\data\
+
+
 And also stored in db.json using TinyDB.
+
+---
 
 🔧 Technologies Used
 Python 3.8+
@@ -70,6 +65,8 @@ Python 3.8+
 requests
 
 tinydb
+
+---
 
 ✅ Features
 Modular ETL architecture
@@ -82,6 +79,8 @@ Organized for international development
 
 Easily extensible
 
+---
+
 📊 Use Case
 This project is ideal for:
 
@@ -91,8 +90,12 @@ Prototyping analytics pipelines
 
 Simulating data pipelines for e-commerce
 
+---
+
 📝 License
 This project is licensed under the MIT License. See the LICENSE file for more details.
+
+---
 
 👨‍💻 Author
 Developed by Enock.
