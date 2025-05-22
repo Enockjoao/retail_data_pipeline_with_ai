@@ -83,4 +83,4 @@ if __name__ == "__main__":
     load.load_carts(carts)
     load.load_users(users)
 
-    print("Dados carregados e salvos com sucesso!")
+    print("Data loaded successfully!")

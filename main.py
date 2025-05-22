@@ -21,7 +21,7 @@ def main():
     load.load_carts(carts)
     load.load_users(users)
 
-    print("ETL executada com sucesso!")
+    print("ETL process completed successfully!")
 
 if __name__ == "__main__":
     main()
