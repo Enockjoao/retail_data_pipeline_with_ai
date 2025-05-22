@@ -1,94 +1,92 @@
+# 🛒 E-Commerce ETL Pipeline
 
-# 🛒 ETL Pipeline for E-Commerce Data
-
-This project implements a complete ETL (Extract, Transform, Load) pipeline to collect and process e-commerce data from the [Fake Store API](https://fakestoreapi.com/). The data includes **products**, **users**, and **carts**, which are extracted, transformed, and loaded into JSON files and a TinyDB database.
+This project is a modular **ETL pipeline** (Extract, Transform, Load) that collects e-commerce data from a public API and stores it locally in both JSON files and a TinyDB database.
 
 ---
 
-## 📁 Project Structure
+## 📦 What It Does
+
+- 🔄 **Extracts** data from [Fake Store API](https://fakestoreapi.com/)
+- 🧹 **Transforms** product, user, and cart data into clean formats
+- 💾 **Loads** the processed data into:
+  - JSON files
+  - TinyDB (NoSQL local database)
+
+---
+
+## 🗂️ Project Structure
 
 api_with_ia/
-├── main.py # Entry point to run the ETL pipeline
-├── etl/
-│ ├── init.py
-│ ├── extract.py # Extract data from the API
-│ ├── transform.py # Clean and structure the data
-│ └── load.py # Save the data to files and database
-└── data/
-├── products.json # Transformed product data
-├── users.json # Transformed user data
-└── carts.json # Transformed cart data
+├── main.py # Entry point for running the pipeline
+├── etl/ # ETL logic lives here
+│ ├── extract.py # Extracts data from API
+│ ├── transform.py # Transforms raw data
+│ └── load.py # Loads data into files and database
+├── data/ # Output folder for processed data
+│ ├── products.json
+│ ├── users.json
+│ └── carts.json
+├── db.json # TinyDB storage file
+└── requirements.txt # Dependencies
 
-
-
----
-
-## ⚙️ Pipeline Overview
-
-### 1. **Extract**
-Data is retrieved from the public endpoints:
-- `/products`
-- `/users`
-- `/carts`
-
-### 2. **Transform**
-- Fields are cleaned and filtered
-- User names are joined and locations simplified
-- Cart product listings are kept as-is
-
-### 3. **Load**
-- Transformed data is saved as `.json` files in `data/`
-- A TinyDB database (`db.json`) is also updated
+yaml
+Copiar
+Editar
 
 ---
 
 ## 🚀 How to Run
 
-### 1. Install dependencies
+1. **Install dependencies**
 
 ```bash
 pip install -r requirements.txt
-2. Run the pipeline
-From the root folder:
+Run the ETL pipeline
 
+bash
+Copiar
+Editar
 python main.py
-This will run the full ETL process and save the data to:
+The data will be saved to:
 
+kotlin
+Copiar
+Editar
+C:\Users\vitor\Desktop\api_with_ia\data\
+And also stored in db.json using TinyDB.
 
-C:\Users\vitor\Desktop\api_with_ia\data
-🧰 Dependencies
-Python 3.8 or higher
+🔧 Technologies Used
+Python 3.8+
 
 requests
 
 tinydb
 
-Your requirements.txt should include:
+✅ Features
+Modular ETL architecture
 
-shell
-Copiar
-Editar
-requests>=2.31.0
-tinydb>=4.7.1
-📌 Features
-Modular design (extract, transform, load)
+Error handling with try/except blocks
 
-Logs key ETL steps using logging
+Logging with timestamps and levels
 
-Error handling via try/except blocks
+Organized for international development
 
-International-ready code (English-named variables and structure)
+Easily extensible
 
-📈 Use Cases
-Educational ETL demonstrations
+📊 Use Case
+This project is ideal for:
 
-E-commerce data simulation
+Learning ETL architecture
 
-Prototyping dashboards and analytics
+Prototyping analytics pipelines
 
-📄 License
-This project is open source and available under the MIT License.
+Simulating data pipelines for e-commerce
+
+📝 License
+This project is licensed under the MIT License. See the LICENSE file for more details.
 
 👨‍💻 Author
-Vitor
-Feel free to connect on LinkedIn or reach out via email.
+Developed by Enock.
+Feel free to connect on LinkedIn or send a message via email.
+LinkedIn :https://www.linkedin.com/in/joao-victor-enock-972b682b9/
+Gmail: enokjoao@gmail.com
